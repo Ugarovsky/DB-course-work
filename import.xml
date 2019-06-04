@@ -1,0 +1,10 @@
+<Products>
+  <product>
+    <name_product>PIpko</name_product>
+    <price>1.59</price>
+    <id_producer>11</id_producer>
+    <id_cat>12</id_cat>
+    <description_product>tasty</description_product>
+    <ammount>10</ammount>
+  </product>
+</Products>

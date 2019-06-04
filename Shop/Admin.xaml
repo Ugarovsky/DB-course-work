@@ -1,0 +1,91 @@
+﻿<Window x:Class="Shop.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shop"
+        mc:Ignorable="d"
+        Title="Admin" Height="677.694" Width="764.656">
+    <TabControl>
+        <TabItem Header="Управление персоналом">
+
+            <Grid Margin="0,-3,0,3">
+                <Button x:Name="button" Content="Добавить" Margin="52,238,558,345" Click="button_Click"/>
+                <Label x:Name="label" Content="Введите данные нового сотрудника" Margin="15,10,476,577"/>
+                <Label x:Name="label1" Content="Имя" Height="100" Width="100" Margin="15,34,636,485"/>
+                <Label x:Name="label2" Content="Фамилия" Height="100" Width="100" Margin="10,65,641,454" RenderTransformOrigin="0.37,0.49"/>
+                <Label x:Name="label4" Content="Должность" Height="100" Width="100" Margin="10,98,641,421"/>
+                <Label x:Name="label5" Content="Логин" Height="100" Width="100" Margin="10,124,641,395"/>
+                <Label x:Name="label6" Content="Пароль" Width="100" Margin="10,152,641,122"/>
+                <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="94,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="94,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="94,102,0,0" VerticalAlignment="Top" Width="120">
+                    <ComboBoxItem>Продавец</ComboBoxItem>
+                    <ComboBoxItem>Администратор</ComboBoxItem>
+                </ComboBox>
+                <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="94,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="94,157,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="2.308,-1.278"/>
+                <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="94,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <Label x:Name="label7" Content="Зарплата" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label3" Content="Все сотрудники" HorizontalAlignment="Left" Margin="468,24,0,0" VerticalAlignment="Top"/>
+                <DataGrid x:Name="emplGrid" HorizontalAlignment="Left" Height="345" Margin="315,50,0,0" VerticalAlignment="Top" Width="426"/>
+                <Button x:Name="button3" Content="Обновить" HorizontalAlignment="Left" Margin="621,404,0,0" VerticalAlignment="Top" Width="100" Click="button3_Click"/>
+                <Button x:Name="button4" Content="Все сотрудники" HorizontalAlignment="Left" Margin="492,404,0,0" VerticalAlignment="Top" Width="100" Click="button4_Click"/>
+                <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="20" Margin="536,429,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56"/>
+                <Button x:Name="button5" Content="Уволить" HorizontalAlignment="Left" Margin="429,429,0,0" VerticalAlignment="Top" Width="74" Click="button5_Click"/>
+                <Button x:Name="button6" Content="Изменить" HorizontalAlignment="Left" Margin="369,404,0,0" VerticalAlignment="Top" Width="99" Click="button6_Click"/>
+                <Button x:Name="button7" Content="Уволить всех" HorizontalAlignment="Left" Margin="451,468,0,0" VerticalAlignment="Top" Width="141" Height="38" Click="button7_Click"/>
+            </Grid>
+
+        </TabItem>
+
+        <TabItem Header="Товары, категории, производители">
+            <Grid>
+                <DataGrid x:Name="prodGrid"  AutoGenerateColumns="True" HorizontalAlignment="Left" Height="248" Margin="46,45,0,0" VerticalAlignment="Top" Width="402"/>
+                <Button x:Name="button1" Content="Обновить" HorizontalAlignment="Left" Margin="90,310,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+                <Button x:Name="button2" Content="Все товары" HorizontalAlignment="Left" Margin="187,310,0,0" VerticalAlignment="Top" Width="75" Click="button2_Click"/>
+                <Button x:Name="button8" Content="Изменить цену" HorizontalAlignment="Left" Margin="294,310,0,0" VerticalAlignment="Top" Width="100" Click="button8_Click"/>
+                <DataGrid x:Name="catGrid" HorizontalAlignment="Left" Height="248" Margin="471,50,0,0" VerticalAlignment="Top" Width="270"/>
+                <Button x:Name="button9" Content="Категории" HorizontalAlignment="Left" Margin="475,310,0,0" VerticalAlignment="Top" Width="74" Click="button9_Click"/>
+                <Label x:Name="label8" Content="Все товары" HorizontalAlignment="Left" Margin="208,19,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label9" Content="Все категории" HorizontalAlignment="Left" Margin="475,19,0,0" VerticalAlignment="Top"/>
+                <Button x:Name="button10" Content="Обновить" HorizontalAlignment="Left" Margin="475,335,0,0" VerticalAlignment="Top" Width="76" Click="button10_Click"/>
+                <Button x:Name="button11" Content="Изменить" HorizontalAlignment="Left" Margin="572,340,0,0" VerticalAlignment="Top" Width="76" Click="button11_Click"/>
+                <Button x:Name="button12" Content="Скидка" HorizontalAlignment="Left" Margin="631,315,0,0" VerticalAlignment="Top" Width="74" Click="button12_Click"/>
+                <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="20" Margin="556,315,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+                <Label x:Name="label10" Content="%" HorizontalAlignment="Left" Margin="606,315,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label11" Content="Добавить новый товар" HorizontalAlignment="Left" Margin="187,355,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label12" Content="Название" HorizontalAlignment="Left" Margin="108,397,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label13" Content="Цена" HorizontalAlignment="Left" Margin="108,428,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label15" Content="id производителя" HorizontalAlignment="Left" Margin="108,454,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.397,0.442"/>
+                <Label x:Name="label16" Content="id категории" HorizontalAlignment="Left" Margin="108,482,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label17" Content="Описание" HorizontalAlignment="Left" Margin="108,508,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label14" Content="Количество" HorizontalAlignment="Left" Margin="108,532,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBox6" HorizontalAlignment="Left" Height="23" Margin="223,400,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="textBox7" HorizontalAlignment="Left" Height="23" Margin="223,428,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="textBox8" HorizontalAlignment="Left" Height="23" Margin="223,454,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="textBox9" HorizontalAlignment="Left" Height="23" Margin="223,482,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="textBox10" HorizontalAlignment="Left" Height="23" Margin="223,508,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="textBox11" HorizontalAlignment="Left" Height="23" Margin="223,536,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <Button x:Name="button13" Content="Добавить товар" HorizontalAlignment="Left" Margin="161,589,0,0" VerticalAlignment="Top" Width="119" Click="button13_Click"/>
+                <DataGrid x:Name="pcGrid" HorizontalAlignment="Left" Height="177" Margin="392,400,0,0" VerticalAlignment="Top" Width="336"/>
+                <Label x:Name="label18" Content="Производители продуктов" HorizontalAlignment="Left" Margin="475,369,0,0" VerticalAlignment="Top"/>
+                <Button x:Name="button14" Content="Все производители" HorizontalAlignment="Left" Margin="515,589,0,0" VerticalAlignment="Top" Width="117" Click="button14_Click"/>
+                <Button x:Name="button17" Content="Обновить" HorizontalAlignment="Left" Margin="423,589,0,0" VerticalAlignment="Top" Width="74" Click="button17_Click"/>
+                <Button x:Name="button18" Content="Убрать с продажи" HorizontalAlignment="Left" Margin="64,354,0,0" VerticalAlignment="Top" Width="118" Click="button18_Click"/>
+                <TextBox x:Name="textBox12" HorizontalAlignment="Left" Height="20" Margin="25,354,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="34"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Продажи">
+            <Grid>
+                <DataGrid x:Name="sGrid" HorizontalAlignment="Left" Height="331" Margin="48,25,0,0" VerticalAlignment="Top" Width="640"/>
+                <Button x:Name="button15" Content="Продажи" HorizontalAlignment="Left" Margin="323,382,0,0" VerticalAlignment="Top" Width="90" Height="40" Click="button15_Click"/>
+            </Grid>
+        </TabItem>
+
+    </TabControl>
+
+
+
+
+</Window>
